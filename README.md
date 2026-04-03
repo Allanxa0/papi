@@ -145,7 +145,7 @@ There are a number of built-in placeholders that can be used once papi is instal
 
 Python: 3.10+
 
-Endstone: 0.6+
+Endstone: 0.11+
 
 ## Contributing
 
