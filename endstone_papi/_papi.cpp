@@ -1,4 +1,5 @@
 #include <endstone_papi/papi.h>
+#include <endstone/plugin/service.h>  
 #include <pybind11/functional.h>
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
@@ -50,6 +51,8 @@ PYBIND11_MODULE(_papi, m)
     py::module_::import("endstone._endstone");
     py::module_::import("endstone");
     py::module_::import("endstone.plugin");
+    
+    py::class_<endstone::Service, std::shared_ptr<endstone::Service>>(m, "_Service");
 
     py::class_<papi::PlaceholderAPI, PyPlaceholderAPI, endstone::Service, std::shared_ptr<papi::PlaceholderAPI>>(
         m, "PlaceholderAPI")
