@@ -32,4 +32,6 @@ target_link_libraries(_${PROJECT_NAME} PRIVATE endstone::endstone)
 install(TARGETS _${PROJECT_NAME} DESTINATION "endstone_papi" COMPONENT python)
 install(DIRECTORY include/ DESTINATION "endstone_papi/include" COMPONENT python)
 
-add_subdirectory(examples/cpp)
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/examples/cpp/CMakeLists.txt")
+    add_subdirectory(examples/cpp)
+endif()
