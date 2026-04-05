@@ -83,4 +83,4 @@ def apply(
         builder.append(replacement)
         i += 1
 
-    return "".join(builder)
+    return "".join(str(item) for item in builder)
