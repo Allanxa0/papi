@@ -124,25 +124,25 @@ class PlaceholderAPI(IPlaceholderAPI):
             self._plugin, "z", lambda player, params: str(int(player.location.z))
         )
         self.register_placeholder(
-            self._plugin, "player_name", lambda player, params: player.name
+            self._plugin, "player_name", lambda player, params: str(player.name)
         )
         self.register_placeholder(
             self._plugin,
             "dimension",
-            lambda player, params: player.location.dimension.type.name.lower(),
+            lambda player, params: str(player.location.dimension.type.name.lower()),
         )
         self.register_placeholder(
             self._plugin,
             "dimension_id",
-            lambda player, params: player.location.dimension.type.value,
+            lambda player, params: str(player.location.dimension.type.value),
         )
         self.register_placeholder(
-            self._plugin, "ping", lambda player, params: player.ping
+            self._plugin, "ping", lambda player, params: str(player.ping)
         )
         self.register_placeholder(
             self._plugin,
             "mc_version",
-            lambda player, params: self._plugin.server.minecraft_version,
+            lambda player, params: str(self._plugin.server.minecraft_version),
         )
         self.register_placeholder(
             self._plugin,
@@ -200,34 +200,34 @@ class PlaceholderAPI(IPlaceholderAPI):
             lambda player, params: datetime.datetime.today().strftime("%S"),
         )
         self.register_placeholder(
-            self._plugin, "address", lambda player, params: player.address
+            self._plugin, "address", lambda player, params: str(player.address)
         )
         self.register_placeholder(
-            self._plugin, "runtime_id", lambda player, params: player.runtime_id
+            self._plugin, "runtime_id", lambda player, params: str(player.runtime_id)
         )
         self.register_placeholder(
-            self._plugin, "exp_level", lambda player, params: player.exp_level
+            self._plugin, "exp_level", lambda player, params: str(player.exp_level)
         )
         self.register_placeholder(
-            self._plugin, "total_exp", lambda player, params: player.total_exp
+            self._plugin, "total_exp", lambda player, params: str(player.total_exp)
         )
         self.register_placeholder(
-            self._plugin, "exp_progress", lambda player, params: player.exp_progress
+            self._plugin, "exp_progress", lambda player, params: str(player.exp_progress)
         )
         self.register_placeholder(
             self._plugin,
             "game_mode",
-            lambda player, params: player.game_mode.name.lower(),
+            lambda player, params: str(player.game_mode.name.lower()),
         )
         self.register_placeholder(
-            self._plugin, "xuid", lambda player, params: player.xuid
+            self._plugin, "xuid", lambda player, params: str(player.xuid)
         )
         self.register_placeholder(
-            self._plugin, "uuid", lambda player, params: player.unique_id
+            self._plugin, "uuid", lambda player, params: str(player.unique_id)
         )
         self.register_placeholder(
-            self._plugin, "device_os", lambda player, params: player.device_os
+            self._plugin, "device_os", lambda player, params: str(player.device_os)
         )
         self.register_placeholder(
-            self._plugin, "locale", lambda player, params: player.locale
+            self._plugin, "locale", lambda player, params: str(player.locale)
         )
